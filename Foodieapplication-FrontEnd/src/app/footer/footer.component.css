@@ -1,0 +1,16 @@
+#footer{
+    display: flex;
+    justify-content: center;
+  }
+  img{
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  mat-card-footer{
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+  }

@@ -1,0 +1,45 @@
+<div class="container">
+    <div id="form">
+        <div id="heading">
+            <h2>Add new restaurant..</h2>
+        </div>
+        <form [formGroup]="addform" (ngSubmit)="addRestaurantTo()">
+            <div>
+                <div>
+                    <mat-form-field appearance="outline" id="gap" color="warn">
+                        <mat-label>Enter Restaurant Id</mat-label>
+                        <input matInput type="number" formControlName="restaurantId" name="restaurantId">
+                        <mat-error *ngIf="restaurantId?.errors?.['required']">
+                            Restaurant ID is required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline" id="gap" color="warn">
+                        <mat-label>Enter Owner's Email</mat-label>
+                        <input matInput type="text" formControlName="email" name="email" [(ngModel)]="this.email1" readonly>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline" color="warn">
+                        <mat-label>Enter Restaurant Name</mat-label>
+                        <input matInput type="text" formControlName="restaurantName" name="restaurantName">
+                        <mat-error *ngIf="restaurantName?.errors?.['required']">
+                            Restaurant name is required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <mat-form-field appearance="outline" color="warn">
+                    <mat-label>Enter Restaurant location</mat-label>
+                    <input matInput type="text" formControlName="restaurantLocation" name="restaurantLocation">
+                    <mat-error *ngIf="restaurantLocation?.errors?.['required']">
+                        Restaurant location is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div id="submit">
+                <button mat-raised-button color="warn" id="login" type="submit">Add Restaurant</button>
+            </div>
+        </form>
+    </div>
+</div>

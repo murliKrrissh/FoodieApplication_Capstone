@@ -1,0 +1,18 @@
+<div id="search">
+  <app-search (searchforLocation)="SearchLocation($event)" (searchforCuisineType)="SearchCuisineType($event)"></app-search>
+</div>
+<div *ngFor="let restaurant of restaurants" class="view">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{restaurant.restaurantName}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <img id="itemImg" mat-card-image src="../../assets/{{restaurant.restaurantName}}.jpg">
+        </mat-card-content>
+        <mat-card-footer>
+          <h3>Location : {{restaurant.restaurantLocation}}</h3>
+          <button mat-raised-button color="warn" (click)="navigateToParticularRestaurant(restaurant.restaurantId)">Show Cuisines</button>
+        </mat-card-footer>
+      </mat-card>
+</div>

@@ -1,0 +1,66 @@
+<div class="container">
+    <div id="form">
+        <div id="heading">
+            <h2>Add Cuisine</h2>
+        </div>
+        <mat-form-field appearance="outline" id="gap" color="warn">
+            <mat-label>Enter Restaurant ID</mat-label>
+            <input matInput type="number" [(ngModel)]="restaurantId">
+        </mat-form-field>
+        <form [formGroup]="addCuisine">
+            <div>
+                <div>
+                    <mat-form-field appearance="outline" id="gap" color="warn">
+                        <mat-label>Enter Cuisine ID</mat-label>
+                        <input matInput type="number" formControlName="cuisineId" name="cuisineId" [(ngModel)]="item.cuisineId">
+                        <mat-error *ngIf="cuisineId.errors?.['required']">
+                            Cuisine ID is required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline" color="warn">
+                        <mat-label>Enter Cuisine Type</mat-label>
+                        <input matInput type="text" formControlName="cuisineType" name="cuisineType" [(ngModel)]="item.cuisineType">
+                        <mat-error *ngIf="cuisineType?.errors?.['required']">
+                            Cuisine Type is required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <mat-form-field appearance="outline" color="warn">
+                    <mat-label>Item Name</mat-label>
+                    <input matInput type="text" formControlName="itemName" name="itemName" [(ngModel)]="item.itemName">
+                    <mat-error *ngIf="itemName?.errors?.['required']">
+                        Item Name is required
+                    </mat-error>
+                </mat-form-field>
+                <div><mat-form-field appearance="outline" color="warn">
+                    <mat-label>Enter Item Price</mat-label>
+                    <input matInput formControlName="itemPrice" name="itemPrice" [(ngModel)]="item.itemPrice">
+                    <mat-error *ngIf="itemPrice?.errors?.['required']">
+                        Item Price is required
+                    </mat-error>
+                </mat-form-field></div>
+                <div><mat-form-field appearance="outline" color="warn">
+                    <mat-label>Item Rating</mat-label>
+                    <input matInput type="number" formControlName="cuisineRating" name="cuisineRating" [(ngModel)]="item.cuisineRating">
+                    <mat-error *ngIf="cuisineRating?.errors?.['required']">
+                        Add rating is required
+                    </mat-error>
+                </mat-form-field></div>
+                <div><mat-form-field appearance="outline" color="warn">
+                    <mat-label>Enter Item Description</mat-label>
+                    <input matInput type="text" formControlName="cuisineDescription" name="cuisineDescription" [(ngModel)]="item.cuisineDescription">
+                    <mat-error *ngIf="cuisineDescription?.errors?.['required']">
+                        Item Description is required
+                    </mat-error>
+                </mat-form-field></div>
+            </div>
+            <div id="submit">
+                <button mat-raised-button (click)="addItem()" color="warn" id="login" [disabled]="! addCuisine.valid">Submit</button>
+                <button mat-raised-button type="reset" color="primary">Reset</button>
+            </div>
+        </form>
+    </div>
+    
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+  <div>
+    <div *ngFor="let cuisine of cuisines" class="view">
+        <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title>{{cuisine.itemName}}</mat-card-title>
+              <mat-icon (click)="navigateToCart(cuisine.cuisineId)" class="cart-icon" color="primary" matTooltip="add to cart">shopping_bag</mat-icon>
+              <mat-card-subtitle>{{cuisine.cuisineType}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image id="itemImg" src="../../assets/cuisine/{{cuisine.itemName}}.jpg" alt="ItemImg">
+            <mat-card-content>
+              <p>
+                {{cuisine.cuisineDescription}}
+              </p>
+              <hr>
+            </mat-card-content>
+              <mat-card-footer>
+                <h4>Price : {{cuisine.itemPrice}}rs</h4>
+              <h4>Rating : {{cuisine.cuisineRating}} <img src="../../assets/rating.jpg" alt=""></h4>
+              </mat-card-footer>
+          </mat-card>
+    </div>
+  </div>
+<button id="addCuisine" mat-raised-button (click)="navigateToAddCuisine()">Add Cuisine</button>
+</div>

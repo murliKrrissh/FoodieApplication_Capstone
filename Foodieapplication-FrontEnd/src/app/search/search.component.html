@@ -1,0 +1,12 @@
+<div>
+    <mat-form-field id="search" appearance="fill">
+        <input matInput type="search" placeholder="Search By Location" [(ngModel)]="searchedLocation">
+    </mat-form-field>
+    <button mat-icon-button (click)=" searchRestaurantByLocation()">
+    <mat-icon color="warn">search</mat-icon></button>
+    <mat-form-field appearance="fill" id="search">
+        <input matInput type="search" placeholder="Search By Cuisine" [(ngModel)]="searchedCuisineType">
+    </mat-form-field>
+    <button mat-icon-button (click)=" searchRestaurantByCuisineType()">
+    <mat-icon color="warn">search</mat-icon></button>
+</div>

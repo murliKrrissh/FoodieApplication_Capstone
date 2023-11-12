@@ -1,0 +1,15 @@
+button{
+    background-color: aliceblue;
+    border: none;
+}
+#search{
+    height: 65px;
+}
+mat-chip-listbox{
+    margin-left: 600px;
+    margin-top: 10px;
+}
+mat-form-field{
+    padding-top: 10px;
+    padding-left: 10px;
+}

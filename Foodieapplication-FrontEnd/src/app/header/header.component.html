@@ -1,0 +1,11 @@
+<div id="div1">
+      <mat-toolbar color="warn">
+      <a href=""><h2 routerLink="/home">{{title}}</h2></a>
+      <div id="buttons">
+            <div id="buttons"><button *ngIf="!isLoggedIn()" id="button-col" mat-raised-button routerLink="/login">Log in</button>
+                  <button *ngIf="!isLoggedIn()" id="button-col" mat-raised-button routerLink="/register">Sign up</button>
+                  <h3 *ngIf="isLoggedIn()">Welcome : {{this.email}}</h3>
+                </div>
+  </div>
+  </mat-toolbar>
+  </div>

@@ -1,0 +1,33 @@
+.view{
+    display: inline-block;
+    margin: 10px;
+    margin-left: 50px;
+}
+#itemImg{
+    margin-left: -16px;
+    height: 200px;
+    width: 300px;
+    padding-bottom: 10px;
+}
+.example-card{
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px lightcoral ;
+    background-color: white;
+}
+mat-card-header{
+    color: red;
+}
+mat-card-footer{
+    text-align: center;
+    color: red;
+}
+button{
+    margin-bottom: 10px;
+}
+p{
+    text-decoration: underline;
+}
+#search{
+    text-align: center;
+}

@@ -1,0 +1,18 @@
+<div class="container">
+    <div>
+      <div *ngFor="let order of orders" class="view">
+          <mat-card class="example-card">
+              <mat-card-header>
+                <mat-card-title>{{order.itemName}}</mat-card-title>
+                <mat-card-subtitle>{{order.restaurantName}}</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image id="itemImg" src="../../assets/cuisine/{{order.itemName}}.jpg" alt="ItemImg">
+              <mat-card-content>
+              </mat-card-content>
+                <mat-card-footer>
+                  <h4>Price : {{order.itemPrice}}rs</h4>
+                </mat-card-footer>
+            </mat-card>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,28 @@
+#div1{
+    display: flex;
+    justify-content: space-around;
+}
+h2{
+    color: white;
+    padding-left: 520px;
+    font-family: "Sofia", sans-serif;
+    font-size: 30px;
+    text-shadow: 3px 3px 3px lightcoral;
+}
+a{
+color: white;
+text-decoration: none;
+}
+#button-col{
+  margin-left: 10px;
+  color: red;
+}
+#buttons{
+    margin-left: 115px;
+}
+#button-col2{
+    margin-left: 200px;
+    color: red;
+    margin-top: -13px;
+  }
+  
